@@ -24,7 +24,7 @@ def main():
             print("Invalid option")
         print(MENU)
         choice = input(">>> ").upper()
-    print("Thank you.")
+    print("Thank you")
 
 
 def convert_fahrenheit_to_celsius(fahrenheit: float):
