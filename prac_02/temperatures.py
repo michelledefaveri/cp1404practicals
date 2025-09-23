@@ -6,6 +6,8 @@ Program for temperature conversion
 MENU = """C - Convert Celsius to Fahrenheit
 F - Convert Fahrenheit to Celsius
 Q - Quit"""
+
+
 print(MENU)
 choice = input(">>> ").upper()
 while choice != "Q":
@@ -22,5 +24,6 @@ while choice != "Q":
     print(MENU)
     choice = input(">>> ").upper()
 print("Thank you.")
+
 
 
