@@ -11,7 +11,7 @@ week two and watched all of the videos.
 I have scheduled to watch lecture videos on Monday's at home in my study room. As I am home all day, 
 I can dedicate the required amount of time for each lecture which I check on the Lecture Video 
 information file prior to watching. 
-
+ 
 
 ## What are you doing well in the subject so far that you will keep doing?
 I am keeping up with the practical exercises and actively learning Python the more I practice. Python
