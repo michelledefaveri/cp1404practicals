@@ -26,8 +26,8 @@ make comments on my code while I write it instead of looking back and having to 
 ## What are you currently doing poorly for practicals in this subject that you will change?
 As I am not used to the idea of committing. I did not commit my work after each step, as I didn't quite 
 understand at the beginning of the week that the idea of committing your work is not to do it at the end,
-however, as you are working through. This is something I acknowledge that I am doing extremely poorly in
-so I will ensure for future practicals that I will commit my work as I go instead of at the end. 
+however, as you are working through. To fix this I redid the practicals making sure to commit as I go. 
+This is something I acknowledge that I am doing extremely poorly in, so I will ensure for future practicals that I will commit my work as I go instead of at the end. 
 I am not thorough with indenting and commenting which I want to improve, as it will make my work much 
 easier to understand. I also must ensure to adhere to all Pythons correct formatting when doing this.
 
