@@ -1,18 +1,21 @@
 """
-CP1404/CP5632 - Practical
-Program to determine score status
+CP1404 - Practical
+Determine score status
 """
+
 import random
 
 def main():
+    """ Get a user score, print the result, and generate a random score."""
+    # Get user score
     score = float(input("Enter score: "))
     result = calculate_result(score)
     print(result)
 
-    # Generate random score at the bottom of main
+    # Generate random score
     random_score = random.randint(0, 100)
     random_result = calculate_result(random_score)
-    print(f"Random score: {random_score} \n {random_result}")
+    print(f"Random score: {random_score} \n{random_result}")
 
 
 def calculate_result(score: float):
@@ -25,6 +28,5 @@ def calculate_result(score: float):
         return "Passable"
     else:
         return "Bad"
-
 
 main()

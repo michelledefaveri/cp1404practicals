@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 - Practical
-Program for temperature conversion
+CP1404 - Practical
+Convert temperature between degrees and fahrenheit
 """
 
 MENU = """C - Convert Celsius to Fahrenheit
@@ -9,7 +9,9 @@ Q - Quit"""
 
 
 def main():
+    """ Display a menu to the user, get input, and perform temperature conversions. """
     print(MENU)
+    # Get user choice
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "C":
