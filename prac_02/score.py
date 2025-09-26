@@ -3,17 +3,31 @@ CP1404/CP5632 - Practical
 Program to determine score status
 """
 
+import random
+
 def main ():
     """ Get a user score, print the result, and generate a random score."""
     # Get user score
     score = float(input("Enter score: "))
+    result = calculate_result(score)
+    print (result)
+
+    # Generate random score
+    random_score = random.randint(0,100)
+    random_result = calculate_result(random_score)
+    # Print result
+    print(f"Random score: {random_score} \n{random_result}")
+
+def calculate_result(score: float):
+    """ Return a message based on the score """
     if score < 0 or score > 100:
-        print("Invalid score")
+        return "Invalid score"
     elif score >= 90:
-        print("Excellent")
+        return "Excellent"
     elif score >= 50:
-        print("Passable")
+        return "Passable"
     else:
-        print("Bad")
+        return "Bad"
+
 
 main ()
