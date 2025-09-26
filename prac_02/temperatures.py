@@ -3,14 +3,10 @@ CP1404 - Practical
 Convert temperature between degrees and fahrenheit
 """
 
-MENU = """C - Convert Celsius to Fahrenheit
-F - Convert Fahrenheit to Celsius
-Q - Quit"""
-
-
 def main():
     """ Display a menu to the user, get input, and perform temperature conversions. """
-    print(MENU)
+    menu = """ C - Convert Celsius to Fahrenheit \n F - Convert Fahrenheit to Celsius \n Q - Quit"""
+    print(menu)
     # Get user choice
     choice = input(">>> ").upper()
     while choice != "Q":
@@ -24,17 +20,17 @@ def main():
             print(f"Result: {celsius:.2f} C")
         else:
             print("Invalid option")
-        print(MENU)
+        print(menu)
         choice = input(">>> ").upper()
     print("Thank you")
 
 
-def convert_fahrenheit_to_celsius(fahrenheit: float):
+def convert_fahrenheit_to_celsius(fahrenheit):
     """Convert Fahrenheit to Celsius."""
     return 5 / 9 * (fahrenheit - 32)
 
 
-def convert_celsius_to_fahrenheit(celsius: float):
+def convert_celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
     return celsius * 9.0 / 5 + 32
 

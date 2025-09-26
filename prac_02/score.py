@@ -15,10 +15,11 @@ def main():
     # Generate random score
     random_score = random.randint(0, 100)
     random_result = calculate_result(random_score)
+    # Print result
     print(f"Random score: {random_score} \n{random_result}")
 
 
-def calculate_result(score: float):
+def calculate_result(score):
     """Return a message based on the score."""
     if score < 0 or score > 100:
         return "Invalid score"

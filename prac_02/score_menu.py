@@ -1,21 +1,15 @@
 """
 CP1404 - Practical
-Get a valid score, print the result, and show stars.
-"""
-
-MENU = """Menu:
-(G)et a valid score
-(P)rint result
-(S)how stars
-(Q)uit
+Get a valid score, print the result, and show stars
 """
 
 def main():
     """ Handle user input to get scores, print results, or show stars. """
     # Get an initial valid score from the user
     score = get_valid_score()
-    print(MENU)
-    choice = input("> ").upper()
+    menu = """ Menu: \n (G)et a valid score (0-100) \n (P)rint result \n (S)how stars \n (Q)uit"""
+    print(menu)
+    choice = input(">>> ").upper()
     while choice != "Q":
         # Get a new valid score
         if choice == "G":
@@ -30,8 +24,8 @@ def main():
         # Invalid menu option
         else:
             print("Invalid option")
-        print(MENU)
-        choice = input("> ").upper()
+        print(menu)
+        choice = input(">>> ").upper()
     print("Farewell!")
 
 
@@ -44,8 +38,8 @@ def get_valid_score():
         score = int(input("Enter score (0–100): "))
     return score
 
-def calculate_result(score: int):
-    """ Return a message based on the score."""
+def calculate_result(score):
+    """ Return a message based on the score. """
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
@@ -55,9 +49,8 @@ def calculate_result(score: int):
     else:
         return "Bad"
 
-def print_stars(score: int):
+def print_stars(score):
     """ Print a line of stars equal to the score. """
     print("*" * score)
-
 
 main()
