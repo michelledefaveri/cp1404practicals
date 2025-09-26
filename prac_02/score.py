@@ -19,7 +19,7 @@ def main ():
     print(f"Random score: {random_score} \n{random_result}")
 
 def calculate_result(score: float):
-    """ Return a message based on the score """
+    """ Return a message based on the score. """
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
