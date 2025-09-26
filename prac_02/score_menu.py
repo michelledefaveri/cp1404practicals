@@ -38,7 +38,7 @@ def get_valid_score():
     return score
 
 def calculate_result(score: int):
-    """ Return a message based on the score."""
+    """ Return a message based on the score. """
     if score >= 90:
         return "Excellent"
     elif score >= 50:
