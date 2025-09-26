@@ -17,7 +17,7 @@ information file prior to watching.
 I am keeping up with the practical exercises and actively learning Python the more I practice. Python
 is new to me as I previously completed EG1002, so I'm working on understanding new concepts.
 I also take time to read the instructions carefully before starting each task. 
-
+  
 
 ## What do you need to stop or change in your work for this subject overall so far?
 I need to practice more handwritten problems, as this will help me prepare for the final exam. I also need 
