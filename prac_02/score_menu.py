@@ -14,9 +14,10 @@ def main():
         # Get a new valid score
         if choice == "G":
             score = get_valid_score()
-        # Print the result of the current score
+        # Get the result of the current score
         elif choice == "P":
-        # Calculate result
+            result = calculate_result(score)
+            print(result)
         # Print stars equal to the score
         elif choice == "S":
         # Print stars
@@ -35,6 +36,17 @@ def get_valid_score():
         print("Invalid score! Must be 0–100.")
         score = int(input("Enter score (0–100): "))
     return score
+
+def calculate_result(score: int):
+    """ Return a message based on the score."""
+    if score < 0 or score > 100:
+        return "Invalid score"
+    elif score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"
 
 
 
