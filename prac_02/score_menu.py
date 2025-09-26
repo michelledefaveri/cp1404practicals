@@ -7,7 +7,7 @@ def main():
     """ Handle user input to get scores, print results, or show stars. """
     # Get an initial valid score from the user
     score = get_valid_score()
-    menu = """ Menu: \n (G)et a valid score (0-100) \n (P)rint result \n (S)how stars \n (Q)uit"""
+    menu = """ Menu: \n (G)et a valid score (0-100) \n (P)rint result \n (S)how stars \n (Q)uit """
     print(menu)
     choice = input(">>> ").upper()
     while choice != "Q":
