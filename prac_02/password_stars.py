@@ -25,3 +25,4 @@ def print_asterisks(password):
 
 
 main()
+

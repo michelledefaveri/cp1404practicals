@@ -31,3 +31,4 @@ def calculate_result(score):
         return "Bad"
 
 main()
+
