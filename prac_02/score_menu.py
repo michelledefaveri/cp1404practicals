@@ -20,7 +20,7 @@ def main():
             print(result)
         # Print stars equal to the score
         elif choice == "S":
-        # Print stars
+            print_stars(score)
         # Invalid menu option
         else:
             print("Invalid option")
@@ -39,15 +39,17 @@ def get_valid_score():
 
 def calculate_result(score: int):
     """ Return a message based on the score."""
-    if score < 0 or score > 100:
-        return "Invalid score"
-    elif score >= 90:
+    if score >= 90:
         return "Excellent"
     elif score >= 50:
         return "Passable"
     else:
         return "Bad"
 
+
+def print_stars(score: int):
+    """ Print a line of stars equal to the score. """
+    print("*" * score)
 
 
 main()
