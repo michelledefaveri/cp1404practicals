@@ -23,3 +23,4 @@ if total_price > 100:
 print(f"Total price for {number_of_items} items is ${total_price:.2f}")
 
 
+
