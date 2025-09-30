@@ -37,6 +37,11 @@ print(f"{year} {name} for about {round(cost)}!")
 # 1922 Gibson L-5 CES for about $16,036!
 
 # TODO: Using a for loop with the range function and f-string formatting,
+iterations = 11
+for i in range(iterations):
+  result = 2**i
+  print(f"2 ^{ i:>2} is {result:>4}")
+
 #  produce the following right-aligned output (DO NOT use a list):
 # 2 ^ 0 is    1
 # 2 ^ 1 is    2
