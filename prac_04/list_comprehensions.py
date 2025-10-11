@@ -50,3 +50,4 @@ long_last_names = ", ".join([name.split()[1] for name in full_names if len(name)
 print(long_last_names)
 
 
+
