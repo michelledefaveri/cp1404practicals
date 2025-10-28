@@ -4,6 +4,7 @@ Actual time =
 """
 
 CURRENT_YEAR = 2025
+VINTAGE_AGE = 50
 
 class Guitar:
     """Guitar class for storing attributes of a guitar."""
@@ -21,6 +22,10 @@ class Guitar:
     def get_age(self):
         """Return how old the guitar is in years based on the CURRENT_YEAR."""
         return CURRENT_YEAR - self.year
+
+    def is_vintage(self):
+        """Determine if a guitar is vintage (over 50 years old)."""
+        return self.get_age() >= VINTAGE_AGE
 
 
 
