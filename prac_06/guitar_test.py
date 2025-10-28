@@ -10,7 +10,13 @@ def run_tests():
 
     # Test get_age()
     print(f"{guitar.name} get_age() - Expected {CURRENT_YEAR - 1922}. Got {guitar.get_age()}")
-    print(f"{guitar.name} get_age() - Expected {CURRENT_YEAR - 2013}. Got {guitar.get_age()}")
+    print(f"{other.name} get_age() - Expected {CURRENT_YEAR - 2013}. Got {other.get_age()}")
     print()
 
+    # Test is_vintage()
+    print(f"{guitar.name} is_vintage() - Expected True. Got {guitar.is_vintage()}")
+    print(f"{other.name} is_vintage() - Expected False. Got {other.is_vintage()}")
+
+if __name__ == "__main__":
+    run_tests()
 
