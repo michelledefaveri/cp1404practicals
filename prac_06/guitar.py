@@ -1,6 +1,6 @@
 """
 Estimated time = 35 minutes
-Actual time =
+Actual time = 37 minutes
 """
 
 CURRENT_YEAR = 2025
@@ -17,7 +17,7 @@ class Guitar:
 
     def __str__(self):
         """Print guitar details."""
-        return f"{self.name} ({self.year}) : {self.cost}"
+        return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
     def get_age(self):
         """Return how old the guitar is in years based on the CURRENT_YEAR."""
