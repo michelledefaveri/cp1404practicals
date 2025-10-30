@@ -1,6 +1,6 @@
 """
 Estimated time = 20 minutes
-Actual time =
+Actual time = 31 minutes
 """
 
 class ProgrammingLanguage:
@@ -15,10 +15,10 @@ class ProgrammingLanguage:
 
     def __str__(self):
         """Return a formatted string describing the language."""
-        return f"{self.name}, {self.typing} Typing, {self.reflection}=True, First appeared in {self.year}"
+        return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
 
     def is_dynamic(self):
-        """Return True if the program is dynamically typed or False if it is not"""
+        """Return True if the program is dynamically typed or False if it is not."""
         return self.typing.lower() == "dynamic"
 
 
