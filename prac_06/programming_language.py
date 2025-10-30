@@ -22,3 +22,4 @@ class ProgrammingLanguage:
         return self.typing.lower() == "dynamic"
 
 
+
