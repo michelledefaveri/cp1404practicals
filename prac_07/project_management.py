@@ -16,14 +16,14 @@ def main():
         for line in in_file:
             parts = line.strip().split()
 
-            # Convert each piece to the right type
+            # Get each value from the list and convert it to the correct type
             name = parts[0]
             date_string = parts[1]
             priority = int(parts[2])
             cost_estimate = float(parts[3])
             completion = int(parts[4])
 
-            # Turn the date text into a date object we can use
+            # Change the date from text to a date object
             start_date = datetime.strptime(date_string, "%d/%m/%Y").date()
 
             # Make a Project from the data and add it to the list
