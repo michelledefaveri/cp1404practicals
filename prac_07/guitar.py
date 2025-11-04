@@ -19,6 +19,10 @@ class Guitar:
         """Print guitar details."""
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
+    def __lt__(self, other):
+        """Compare guitars by year for sorting oldest to newest."""
+        return self.year < other.year
+
     def get_age(self):
         """Return how old the guitar is in years based on the CURRENT_YEAR."""
         return CURRENT_YEAR - self.year
