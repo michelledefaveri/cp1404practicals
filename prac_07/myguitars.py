@@ -1,3 +1,7 @@
+"""
+CP1404/CP5632 - Practical
+More Guitars Exercise
+"""
 
 FILENAME = "guitars.csv"
 from guitar import Guitar
