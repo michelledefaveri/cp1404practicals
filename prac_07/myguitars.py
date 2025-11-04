@@ -17,6 +17,7 @@ def main():
 
 
 def load_guitars():
+    """Load guitars from file."""
     guitars = []
     # Read guitars from file
     with open(FILENAME, "r") as in_file:
@@ -28,6 +29,7 @@ def load_guitars():
     return guitars
 
 def display_guitars(guitars):
+    """Display guitars in csv file."""
     # Display guitars
     print("My Guitars:")
     for guitar in guitars:
