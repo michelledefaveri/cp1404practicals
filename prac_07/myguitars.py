@@ -19,6 +19,20 @@ def main():
     for guitar in guitars:
         print(guitar)
 
+    # Get user to enter new guitar details
+    print("Enter new guitars.")
+    name = input("Name: ").strip()
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: "))
+        guitars.append(Guitar(name, year, cost))
+        name = input("Name: ").strip()
+
+    # Save all guitars back to the file
+    with open(FILENAME, "w") as out_file:
+        for guitar in guitars:
+            out_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+    print(f"All guitars saved to {FILENAME}.")
 
 def load_guitars():
     """Load guitars from file."""
