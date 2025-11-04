@@ -4,8 +4,20 @@ from guitar import Guitar
 
 def main():
     """Read guitars from CSV, display them, and sort by year."""
-    guitars = []
+    guitars = load_guitars()
+    print(f"{len(guitars)} guitars loaded from {FILENAME}.\n")
 
+    display_guitars(guitars)
+
+    # Sort by year and display
+    guitars.sort()
+    print("\nGuitars sorted by year:")
+    for guitar in guitars:
+        print(guitar)
+
+
+def load_guitars():
+    guitars = []
     # Read guitars from file
     with open(FILENAME, "r") as in_file:
         for line in in_file:
@@ -13,17 +25,11 @@ def main():
             if len(parts) == 3:
                 name, year, cost = parts
                 guitars.append(Guitar(name.strip(), int(year), float(cost)))
+    return guitars
 
-    print(f"{len(guitars)} guitars loaded from {FILENAME}.\n")
-
+def display_guitars(guitars):
     # Display guitars
     print("My Guitars:")
-    for guitar in guitars:
-        print(guitar)
-
-    # Sort by year and display
-    guitars.sort()
-    print("\nGuitars sorted by year:")
     for guitar in guitars:
         print(guitar)
 
