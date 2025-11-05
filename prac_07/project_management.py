@@ -88,6 +88,19 @@ def save_projects(projects, filename):
                        f"{project.priority}\t{project.cost_estimate}\t{project.completion}\n")
     print("Saved", len(projects), "projects to", filename)
 
+def filter_projects_by_date(projects):
+    """Display projects starting on or after a user-specified date."""
+    # Prompt user for a date and convert input string to a date object
+    date_string = input("Show projects that start after date (dd/mm/yyyy): ")
+    filter_date = datetime.strptime(date_string, "%d/%m/%Y").date()
+    # Filter projects starting on or after the specified date
+    filtered_projects = [project for project in projects if project.get_start_date() >= filter_date]
+    # Sort the filtered projects by start date
+    filtered_projects.sort(key=Project.get_start_date)
+    # Display each filtered project
+    for project in filtered_projects:
+        print(project)
+
 
 if __name__ == "__main__":
     main()
