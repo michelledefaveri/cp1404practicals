@@ -57,6 +57,7 @@ def load_projects(filename):
             project = Project(name, start_date, priority, cost_estimate, completion)
             # Add project to list
             projects.append(project)
+    print("Loaded", len(projects), "projects from", filename)
 
 def display_projects(projects):
     """Display complete and incomplete projects."""
