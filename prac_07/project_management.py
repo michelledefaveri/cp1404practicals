@@ -47,6 +47,13 @@ def load_projects(filename):
                 continue
             parts = line.strip().split("\t")  # Split line into fields
 
+            # Convert fields to appropriate types
+            name = parts[0]
+            start_date = datetime.strptime(parts[1], "%d/%m/%Y").date()
+            priority = int(parts[2])
+            cost_estimate = float(parts[3])
+            completion = int(parts[4])
+
 
 def display_projects(projects):
     """Display complete and incomplete projects."""
