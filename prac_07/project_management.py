@@ -33,10 +33,17 @@ def main():
         elif choice == "u":
             update_project(projects)
         elif choice == "q":
-            # Add code to ask user to save file
+            save_input = input(f"Would you like to save to {FILENAME}? (y/n) ").lower()
+            if save_input == "y":
+                save_projects(projects, FILENAME)
+            elif save_input == "n":
+                print("Projects not saved.")
+            else:
+                print("Invalid choice. Please enter 'y' or 'n'.")
             print("Thank you for using custom-built project management software.")
         else:
             print("Invalid choice. Please try again.")
+
 
 def load_projects(filename):
     """Load projects from a tab-delimited file."""
