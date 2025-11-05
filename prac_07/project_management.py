@@ -54,6 +54,9 @@ def load_projects(filename):
             cost_estimate = float(parts[3])
             completion = int(parts[4])
 
+            project = Project(name, start_date, priority, cost_estimate, completion)
+            # Add project to list
+            projects.append(project)
 
 def display_projects(projects):
     """Display complete and incomplete projects."""
