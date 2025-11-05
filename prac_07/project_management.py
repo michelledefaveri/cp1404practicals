@@ -39,25 +39,27 @@ def main():
 def load_projects(filename):
     """Load projects from a tab-delimited file."""
     projects = []  # List to store Project objects
+    try:
+        with open(filename, "r") as file:  # Open file for reading
+            next(file)  # Skip header line
+            for line in file:
+                if line.strip() == "":  # Skip empty lines
+                    continue
+                parts = line.strip().split("\t")  # Split line into fields
 
-    with open(filename, "r") as file:  # Open file for reading
-        next(file)  # Skip header line
-        for line in file:
-            if line.strip() == "":  # Skip empty lines
-                continue
-            parts = line.strip().split("\t")  # Split line into fields
+                # Convert fields to appropriate types
+                name = parts[0]
+                start_date = datetime.strptime(parts[1], "%d/%m/%Y").date()
+                priority = int(parts[2])
+                cost_estimate = float(parts[3])
+                completion = int(parts[4])
 
-            # Convert fields to appropriate types
-            name = parts[0]
-            start_date = datetime.strptime(parts[1], "%d/%m/%Y").date()
-            priority = int(parts[2])
-            cost_estimate = float(parts[3])
-            completion = int(parts[4])
-
-            project = Project(name, start_date, priority, cost_estimate, completion)
-            # Add project to list
-            projects.append(project)
-    print("Loaded", len(projects), "projects from", filename)
+                project = Project(name, start_date, priority, cost_estimate, completion)
+                # Add project to list
+                projects.append(project)
+        print("Loaded", len(projects), "projects from", filename)
+    except FileNotFoundError:
+        print(f"{filename} not found")
 
 def display_projects(projects):
     """Display complete and incomplete projects."""
