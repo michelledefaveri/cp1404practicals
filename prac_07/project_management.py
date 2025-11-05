@@ -19,9 +19,11 @@ def main():
         print(MENU)
         choice = input(">>> ").lower()
         if choice == "l":
-            pass
+            filename = input("Filename to load from: ")
+            projects = load_projects(filename)
         elif choice == "s":
-            pass
+            filename = input("Filename to save to: ")
+            save_projects(projects, filename)
         elif choice == "d":
             display_projects(projects)
         elif choice == "f":
@@ -60,6 +62,7 @@ def load_projects(filename):
         print("Loaded", len(projects), "projects from", filename)
     except FileNotFoundError:
         print(f"{filename} not found")
+    return projects
 
 def display_projects(projects):
     """Display complete and incomplete projects."""
@@ -73,6 +76,17 @@ def display_projects(projects):
     print("Completed projects:")
     for project in completed_projects:
         print(" ", project)
+
+def save_projects(projects, filename):
+    """Save projects to a tab-delimited file."""
+    with open(filename, "w") as file:
+        # Write the header line
+        file.write("Name\tStart Date\tPriority\tCost Estimate\tCompletion\n")
+        for project in projects:
+            # Write each project's data, formatting the date as dd/mm/yyyy
+            file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t"
+                       f"{project.priority}\t{project.cost_estimate}\t{project.completion}\n")
+    print("Saved", len(projects), "projects to", filename)
 
 
 if __name__ == "__main__":
