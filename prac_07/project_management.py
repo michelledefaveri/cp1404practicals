@@ -31,7 +31,7 @@ def main():
         elif choice == "a":
             add_new_project(projects)
         elif choice == "u":
-            pass
+            update_project(projects)
         elif choice == "q":
             # Add code to ask user to save file
             print("Thank you for using custom-built project management software.")
@@ -111,6 +111,28 @@ def add_new_project(projects):
     completion_percentage = int(input("Percent complete: "))
     project = Project(name, start_date, priority, cost_estimate, completion_percentage)
     projects.append(project)
+
+def update_project(projects):
+    """Allow the user to update the completion and/or priority of a selected project."""
+
+    # Display projects with their index for selection
+    for index, project in enumerate(projects):
+        print(index, project)
+
+    # Ask user which project to update
+    choice_index = int(input("Project choice: "))
+    selected_project = projects[choice_index]
+    print(selected_project)
+
+    # Update completion if a new value is entered
+    new_completion_input = input("New Percentage: ")
+    if new_completion_input != "":
+        selected_project.update_completion(int(new_completion_input))
+
+    # Update priority if a new value is entered
+    new_priority_input = input("New Priority: ")
+    if new_priority_input != "":
+        selected_project.update_priority(int(new_priority_input))
 
 
 if __name__ == "__main__":

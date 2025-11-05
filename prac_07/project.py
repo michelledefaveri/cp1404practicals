@@ -17,7 +17,18 @@ class Project:
     def is_complete(self):
         return self.completion >= 100
 
+    def update_completion(self, completion_value):
+        """Update completion to the given value."""
+        self.completion = completion_value
+
+    def update_priority(self, priority_value):
+        """Update priority to the given value."""
+        self.priority = priority_value
 
     def get_start_date(self):
+        """Return the start date (used for filtering/sorting)."""
         return self.start_date
 
+    def __lt__(self, other):
+        """Default sorting by priority (lower number = higher priority)."""
+        return self.priority < other.priority
