@@ -69,7 +69,7 @@ def using_namedtuple():
     for row in reader:
         # print(row)
         language = Language._make(row)
-        print(repr(language))
+        print(language)
     in_file.close()
 
 
@@ -83,7 +83,7 @@ def using_csv_namedtuple():
     in_file.readline()
     for language in map(Language._make, csv.reader(in_file)):
         print(language.name, 'was released in', language.year)
-        print(repr(language))
+        print(language)
 
 # using_csv_namedtuple()
 
