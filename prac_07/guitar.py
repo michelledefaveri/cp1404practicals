@@ -1,6 +1,6 @@
 """
-Estimated time = 35 minutes
-Actual time = 37 minutes
+CP1404/CP5632 - Practical
+More Guitars Exercise
 """
 
 CURRENT_YEAR = 2025
