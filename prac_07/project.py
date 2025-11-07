@@ -1,3 +1,8 @@
+"""
+Estimated time: 30 minutes
+Actual time: 25 minutes
+"""
+
 from datetime import date
 
 class Project:
