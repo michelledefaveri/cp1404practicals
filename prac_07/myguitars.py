@@ -27,9 +27,8 @@ def load_guitars():
     with open(FILENAME, "r") as in_file:
         for line in in_file:
             parts = line.strip().split(",")
-            if len(parts) == 3:
-                name, year, cost = parts
-                guitars.append(Guitar(name.strip(), int(year), float(cost)))
+            name, year, cost = parts
+            guitars.append(Guitar(name.strip(), int(year), float(cost)))
     return guitars
 
 def display_guitars(guitars):
