@@ -10,11 +10,15 @@ class MilesToKilometerConverterApp(App):
         return self.root
 
     def handle_calculate(self):
+        miles = self.get_miles_value()
+        result = miles * MILES_TO_KM
+        self.root.ids.output_label.text = str(result)
+
+    def get_miles_value(self):
         try:
             miles = float(self.root.ids.input_miles.text)
         except ValueError:
             miles = 0
-        result = miles * MILES_TO_KM
-        self.root.ids.output_label.text = str(result)
+        return miles
 
 
