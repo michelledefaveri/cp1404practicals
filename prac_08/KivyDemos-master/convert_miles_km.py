@@ -21,4 +21,12 @@ class MilesToKilometerConverterApp(App):
             miles = 0
         return miles
 
+    def handle_increment(self, change):
+        miles = self.get_miles_value() + change
+        self.root.ids.input_miles.text = str(miles)
+        self.handle_calculate()
+
+
+MilesToKilometerConverterApp().run()
+
 
