@@ -9,3 +9,12 @@ class MilesToKilometerConverterApp(App):
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
+    def handle_calculate(self):
+        try:
+            miles = float(self.root.ids.input_miles.text)
+        except ValueError:
+            miles = 0
+        result = miles * MILES_TO_KM
+        self.root.ids.output_label.text = str(result)
+
+
