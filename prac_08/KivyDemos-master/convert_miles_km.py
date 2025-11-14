@@ -39,7 +39,4 @@ class MilesToKilometerConverterApp(App):
         self.root.ids.input_miles.text = str(miles)
         self.handle_calculate()
 
-
 MilesToKilometerConverterApp().run()
-
-

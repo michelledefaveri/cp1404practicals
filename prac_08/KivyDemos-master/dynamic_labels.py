@@ -28,7 +28,4 @@ class DynamicLabelsApp(App):
             dynamic_label = Label(text=name)
             self.root.ids.main.add_widget(dynamic_label)
 
-
 DynamicLabelsApp().run()
-
-
