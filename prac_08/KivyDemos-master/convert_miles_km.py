@@ -30,7 +30,7 @@ class MilesToKilometerConverterApp(App):
         try:
             miles = float(self.root.ids.input_miles.text)
         except ValueError:
-            miles = 0
+            miles = 0.0
         return miles
 
     def handle_increment(self, change):
