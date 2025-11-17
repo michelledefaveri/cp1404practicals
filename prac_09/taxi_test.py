@@ -1,5 +1,6 @@
-from taxi import Taxi
+""""Taxi test"""
 
+from taxi import Taxi
 
 def main():
     """Test taxi class."""
