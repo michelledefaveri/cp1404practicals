@@ -10,6 +10,6 @@ def main():
 
     print(f"Fare for an 18km trip with fanciness 2 is ${fare:.2f}")
 
-    assert fare == 48.78, f"Expected 48.78 and got {fare:.2f}"
+    assert abs(fare-48.78) < 0.01, f"Expected 48.78 and got {fare:.2f}"
 
 main()
