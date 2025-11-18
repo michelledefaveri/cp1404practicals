@@ -5,11 +5,17 @@ class SilverServiceTaxi(Taxi):
 
     flagfall = 4.50
 
-    """Initialise a SilverServiceTaxi."""
     def __init__(self, name, fuel, fanciness):
+        """Initialise a SilverServiceTaxi."""
         super().__init__(name, fuel)
         self.fanciness = fanciness
         self.price_per_km = Taxi.price_per_km * fanciness
+
+    def get_fare(self):
+        """Return the fare distance."""
+        return super().get_fare()+self.flagfall
+
+
 
 
 
