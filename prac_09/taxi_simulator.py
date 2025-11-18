@@ -18,8 +18,7 @@ def main():
     while choice != "q":
         if choice == "c":
             print("Taxis available: ")
-            for i, taxi in enumerate(taxis):
-                print(f"{i} - {taxi}")
+            display_taxis(taxis)
 
         elif choice == "d":
             pass
@@ -27,6 +26,11 @@ def main():
             print("Invalid choice")
 
         choice = input(">>> ").lower
+
+
+def display_taxis(taxis):
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
 
 
 main()
