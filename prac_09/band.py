@@ -18,3 +18,9 @@ class Band:
         """Add a Musician object to the band."""
         self.musicians.append(musician)
 
+    def play(self):
+        """Return a string showing each musician playing or needing an instrument."""
+        result = []
+        for musician in self.musicians:
+            result.append(musician.play())
+        return "\n".join(result)
