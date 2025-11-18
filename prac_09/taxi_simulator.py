@@ -13,3 +13,20 @@ def main():
 
     print("Let's drive!")
     print(MENU)
+
+    choice = input(">>> ").lower()
+    while choice != "q":
+        if choice == "c":
+            print("Taxis available: ")
+            for i, taxi in enumerate(taxis):
+                print(f"{i} - {taxi}")
+
+        elif choice == "d":
+            pass
+        else:
+            print("Invalid choice")
+
+        choice = input(">>> ").lower
+
+
+main()
