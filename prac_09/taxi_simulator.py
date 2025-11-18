@@ -19,16 +19,29 @@ def main():
         if choice == "c":
             print("Taxis available: ")
             display_taxis(taxis)
-
+            current_taxi = choose_taxi(taxis)
         elif choice == "d":
-            pass
+            if current_taxi:
+                pass
         else:
             print("Invalid choice")
 
-        choice = input(">>> ").lower
+        print(MENU)
+        choice = input(">>> ").lower()
+
+
+def choose_taxi(taxis):
+    """Ask user to choose a taxi and return it."""
+    try:
+        taxi_choice = int(input("Choose taxi: "))
+        return taxis[taxi_choice]
+    except (ValueError, IndexError):
+        print("Invalid taxi choice")
+        return None
 
 
 def display_taxis(taxis):
+    """Print the list of taxis."""
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
 
