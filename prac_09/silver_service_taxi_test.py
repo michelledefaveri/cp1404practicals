@@ -14,7 +14,7 @@ def main():
 
     print(f"Fare for an 18km trip with fanciness 2 is ${fare:.2f}")
 
-    # Assert expected price using a small tolerance
-    assert fare == 48.80, f"Expected 48.78 and got {fare:.2f}"
+    # Assert expected price
+    assert fare == 48.80, f"Expected 48.80 and got {fare:.2f}"
 
 main()
