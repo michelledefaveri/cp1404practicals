@@ -45,7 +45,14 @@ def run_tests():
     # Note that Car's __init__ function sets the fuel in one of two ways:
     # using the value passed in or the default
     # You should test both of these
+
+    # Set the fuel as the value passed in (10)
     car = Car(fuel=10)
+    assert car.fuel == 10
+
+    # Set the fuel using the default
+    default_car = Car()
+    assert default_car.fuel == 0
 
 
 run_tests()
