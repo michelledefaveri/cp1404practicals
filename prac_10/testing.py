@@ -73,3 +73,20 @@ doctest.testmod()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
+
+def phrase_to_sentence(phrase):
+    """Format a phrase as a sentence.
+    >>> phrase_to_sentence('hello')
+    'Hello.'
+    >>> phrase_to_sentence('It is an ex parrot.')
+    'It is an ex parrot.'
+    >>> phrase_to_sentence('cp1404 is good.')
+    'Cp1404 is good.'
+    """
+
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence = f"{sentence}."
+    return sentence
+
+
